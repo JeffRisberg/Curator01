@@ -1,19 +1,18 @@
-package com.company.treeCache;
+package com.company.curator.treeCache;
 
 import framework.CreateClientExamples;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.TreeCache;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
  */
-public class Main {
-  public static void main(String[] args) throws IOException {
+public class TreeCacheExamples {
+  public static void main(String[] args) {
     try {
-      System.out.println("treecache");
+      System.out.println("treeCache");
 
       CuratorFramework client = CreateClientExamples.createSimple("127.0.0.1:2181");
       client.getUnhandledErrorListenable().addListener((message, e) -> {
