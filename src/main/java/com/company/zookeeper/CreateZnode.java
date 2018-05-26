@@ -16,7 +16,7 @@ public class CreateZnode {
     createConnection(hostname);
 
     String path = "/tutorialdrive";
-    byte[] data = null;
+    byte[] data = "now is the time".getBytes();
     List<ACL> acl = ZooDefs.Ids.OPEN_ACL_UNSAFE;
     CreateMode createMode = CreateMode.PERSISTENT;
 
