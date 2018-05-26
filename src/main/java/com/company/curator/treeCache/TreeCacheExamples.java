@@ -1,6 +1,6 @@
 package com.company.curator.treeCache;
 
-import framework.CreateClientExamples;
+import com.company.curator.framework.CreateClientExamples;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.TreeCache;
 
@@ -25,6 +25,7 @@ public class TreeCacheExamples {
       client.start();
 
       TreeCache cache = TreeCache.newBuilder(client, "/").setCacheData(false).build();
+
       cache.getListenable().addListener((c, event) -> {
         if (event.getData() != null) {
           System.out.println("type=" + event.getType() + " path=" + event.getData().getPath());
